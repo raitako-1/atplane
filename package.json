@@ -43,7 +43,7 @@
     "typescript": "^5.6.3"
   },
   "engines": {
-    "node": ">= 20",
+    "node": ">= 18",
     "npm": "use pnpm please!",
     "yarn": "use pnpm please!",
     "pnpm": ">= 7.19.0"
@@ -55,7 +55,7 @@
       "!src/**/*.test.*"
     ],
     "splitting": false,
-    "sourcemap": true,
+    "sourcemap": false,
     "clean": true
   }
 }
