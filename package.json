@@ -1,0 +1,50 @@
+{
+  "name": "atplane",
+  "version": "1.0.0",
+  "description": "ATPlane is ATProtocol Client redirect service.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node ./src/index.ts",
+    "start": "node ./dist/index.js",
+    "build": "tsc -p ./"
+  },
+  "keywords": [],
+  "author": "raitako_1",
+  "license": "MIT",
+  "dependencies": {
+    "@atproto/api": "^0.13.16",
+    "@atproto/common": "^0.4.4",
+    "@atproto/identity": "^0.4.3",
+    "@atproto/lexicon": "^0.4.3",
+    "@atproto/oauth-client-node": "^0.2.1",
+    "@atproto/sync": "^0.1.6",
+    "@atproto/syntax": "^0.3.1",
+    "@atproto/xrpc-server": "^0.7.3",
+    "better-sqlite3": "^11.5.0",
+    "dotenv": "^16.4.5",
+    "envalid": "^8.0.0",
+    "express": "^4.21.1",
+    "iron-session": "^8.0.4",
+    "kysely": "^0.27.4",
+    "multiformats": "^9.9.0",
+    "pino": "^9.5.0",
+    "uhtml": "^4.5.11"
+  },
+  "devDependencies": {
+    "@atproto/lex-cli": "^0.5.2",
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.9.0",
+    "pino-pretty": "^13.0.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
