@@ -1,13 +1,13 @@
 {
   "name": "atplane",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "ATPlane is ATProtocol Client redirect service.",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "ts-node ./src/index.ts | pino-pretty",
-    "clean": "rimraf dist",
-    "build": "tsc -p ./",
-    "start": "node ./dist/index.js | pino-pretty"
+    "clean": "rimraf ./dist ./node_modules && pnpm i",
+    "build": "tsup",
+    "start": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "raitako_1",
@@ -39,13 +39,23 @@
     "pino-pretty": "^13.0.0",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
+    "tsup": "^8.3.5",
     "typescript": "^5.6.3"
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "engines": {
+    "node": ">= 20",
+    "npm": "use pnpm please!",
+    "yarn": "use pnpm please!",
+    "pnpm": ">= 7.19.0"
+  },
+  "tsup": {
+    "entry": [
+      "src",
+      "!src/**/__tests__/**",
+      "!src/**/*.test.*"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
+  }
 }
